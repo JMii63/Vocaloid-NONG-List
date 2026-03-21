@@ -1,6 +1,9 @@
 # Vocaloid NONG List
 a bunch of Vocaloid NONGs for use in Geometry Dash (specifically Jukebox)
 
+# NOTE:
+there is currently an issue with jukebox that is breaking custom indexes, so please go contribute to that.
+
 This is mainly used in my upcoming level pack "Project Dash: Geometrical Stage", but you can use it in your own levels if you want.
 
 There will eventually be a seperate list for full size versions, but for now it's only the in-game short versions.
