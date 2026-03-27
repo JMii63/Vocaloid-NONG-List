@@ -5,10 +5,6 @@ This is mainly used in my upcoming level pack "Project Dash: Geometrical Stage",
 
 There will eventually be a seperate list for full size versions, but for now it's only the in-game short versions.
 
-
-# NOTE:
-there is currently an issue with jukebox that is breaking custom indexes, so please go contribute to that.
-
 # How To Use
 
 1. Go to Jukebox settings
@@ -18,5 +14,9 @@ there is currently an issue with jukebox that is breaking custom indexes, so ple
 5. Use the in-game version from Vocaloid NONG List!
 
 If you want to add a song, please make an issue on this GitHub page.
+
+# Contributions
+
+XblazeGMD (for fixing some issues when i couldn't)
 
 -JMii :]
