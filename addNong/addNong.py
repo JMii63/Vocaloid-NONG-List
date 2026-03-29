@@ -72,7 +72,7 @@ def main() -> None:
     addToIndex = inputYesNo("Do you want to continue?")
     if addToIndex:
         try:
-            file = "in-game.json"
+            file = "in-game.min.json"
             root = Path.cwd()
             filePath = root / file
             if not filePath.exists():
