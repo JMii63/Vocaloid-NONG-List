@@ -9,7 +9,7 @@ There will eventually be a seperate list for full size versions, but for now it'
 
 1. Go to Jukebox settings
 2. click on the View button next to "Indexes"
-3. Add the .json (link is https://raw.githubusercontent.com/JMii63/Vocaloid-NONG-List/main/in-game.min.json)
+3. Add the .json (link is https://raw.githubusercontent.com/JMii63/Vocaloid-NONG-List/main/in-game.json)
 4. Go to a level in the PD:GS pack (currently only World Is Mine is available)
 5. Use the in-game version from Vocaloid NONG List!
 
