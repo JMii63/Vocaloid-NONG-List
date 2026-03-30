@@ -90,7 +90,7 @@ def main() -> None:
         except FileNotFoundError:
             print("[bold red]ERROR: Could not find index file[/]")
         except json.JSONDecodeError as e:
-            print(f"[bold red]Could not decode JSON: e[/]")
+            print(f"[bold red]Could not decode JSON: {e}[/]")
 
 if __name__ == '__main__':
     main()
