@@ -101,4 +101,7 @@ def main() -> None:
             print(f"[bold red]Could not decode JSON: {e}[/]")
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(130)
