@@ -27,6 +27,11 @@ def isNumber(x: str) -> bool | str:
 
     return True
 
+def validateID(x: str) -> bool | str:
+    if not re.match(r'^[a-zA-Z0-9\-_]+$', x):
+        return "Please, no special characters (other than '-' and '_')"
+    return True
+
 def ask(*args, **kwargs) -> str:
     answer = questionary.text(*args, **kwargs, style=STYLE).ask()
     if answer is None:
@@ -55,8 +60,11 @@ def main() -> None:
             break
         replaces.append(int(songID.strip()))
 
-    id = re.sub(r"[^a-zA-Z0-9 ]", "", name.lower())
-    id = id.replace(" ", "-")
+    identifier = ask(
+        "ID:",
+        validate=validateID,
+        default=re.sub(r"[^a-zA-Z0-9 ]", "", name.lower()).replace(" ", "-") # Remove anything non-alphanumeric and replace spaces with '-'
+    )
 
     data = {
         "name": name,
@@ -82,7 +90,7 @@ def main() -> None:
             with open(filePath, "r+") as f:
                 index = json.load(f)
                 index["lastUpdate"] = int(time()) # update 'lastUpdate'
-                index["nongs"]["hosted"][id] = data
+                index["nongs"]["hosted"][identifier] = data
 
                 f.seek(0)
                 json.dump(index, f, indent=2)
