@@ -1,59 +1,59 @@
 import json
+import questionary
 import re
+import sys
 from pathlib import Path
-from rich import print_json
+from rich import print_json, print
 from time import time
 
-def inputNotEmpty(prompt: str) -> str:
-    while True:
-        userInput = input(f"{prompt}: ")
-        if not userInput or userInput.isspace():
-            print("Please do not put an empty value, ty :)")
-            continue
+STYLE = questionary.Style([
+    ("question", "nobold"),
+    ("answer", "nobold fg:pink"),
+    ("qmark", "bold fg:purple")
+]);
 
-        return userInput
+def notEmpty(x: str) -> bool | str:
+    if len(x.strip()) == 0:
+        return "Please do not put an empty value, ty :)"
+    return True
 
-def inputNum(prompt: str) -> int:
-    while True:
-        userInput = inputNotEmpty(prompt)
-        if not userInput.isdigit():
-            print("Please put a valid number")
-            continue
+def isNumber(x: str) -> bool | str:
+    empty = notEmpty(x)
+    if isinstance(empty, str):
+        return empty
 
-        return int(userInput)
+    if not x.isdigit():
+        return "Please put a valid number"
 
-def inputYesNo(prompt: str) -> bool:
-    while True:
-        userInput = inputNotEmpty(f"{prompt} (y/n)")
-        userInput = userInput.lower()
+    return True
 
-        if userInput == "y":
-            return True
-        elif userInput == "n":
-            return False
-        else:
-            print("Please put a valid input (y/n)")
+def ask(*args, **kwargs) -> str:
+    answer = questionary.text(*args, **kwargs, style=STYLE).ask()
+    if answer is None:
+        sys.exit(130)
+    return answer
+
+def askYesNo(prompt: str) -> bool:
+    ok = questionary.confirm(prompt, default=False, style=STYLE).ask()
+    if ok is None:
+        sys.exit(130)
+    return ok
 
 def main() -> None:
-    name = inputNotEmpty("Song Name")
-    author = inputNotEmpty("Song Author")
-    url = inputNotEmpty("Download URL")
-    startOffset = inputNum("Start Offset")
+    name = ask("Song Name:", validate=notEmpty)
+    author = ask("Song Author:", validate=notEmpty)
+    url = ask("Download URL:", validate=notEmpty)
+    startOffset = ask("Start Offset:", validate=isNumber)
     replaces: list[int] = []
 
     while True:
-        print("Songs IDs this NONG will replace:")
-        if replaces:
-            for r in replaces:
-                print(r, end=" ") # Doesn't print any newline at the end
-            print() # Prints a newline
-
-            addMore = inputYesNo("Do you want to add another song ID?")
-            if not addMore:
-                break
-
-        newReplacement = inputNum("Song ID to replace")
-        replaces.append(newReplacement)
+        songID = ask(
+            "Song IDs this NONG will replace (leave empty to finish):",
+            validate=lambda x: ((len(x.strip()) > 0 and x.isdigit()) or bool(replaces)) or "Please input at least one Song ID"
+        )
+        if songID.strip() == "":
+            break
+        replaces.append(int(songID.strip()))
 
     id = re.sub(r"[^a-zA-Z0-9 ]", "", name.lower())
     id = id.replace(" ", "-")
@@ -66,10 +66,10 @@ def main() -> None:
         "songs": replaces
     }
 
-    print("\nThis will add the following NONG to the index:")
+    print("[bold #c585c6]![/] This will add the following NONG to the index:")
     print_json(json.dumps(data))
 
-    addToIndex = inputYesNo("Do you want to continue?")
+    addToIndex = askYesNo("Do you want to continue?")
     if addToIndex:
         try:
             file = "in-game.json"
@@ -88,9 +88,9 @@ def main() -> None:
                 json.dump(index, f, indent=2)
                 f.truncate()
         except FileNotFoundError:
-            print("Could not find index file")
+            print("[bold red]ERROR: Could not find index file[/]")
         except json.JSONDecodeError as e:
-            print(f"Could not decode JSON: e")
+            print(f"[bold red]Could not decode JSON: e[/]")
 
 if __name__ == '__main__':
     main()
