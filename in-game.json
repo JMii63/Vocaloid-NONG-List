@@ -85,6 +85,34 @@
         "startOffset": 0,
         "url": "https://dn721208.ca.archive.org/0/items/lemon-melon-cookie/lemon%20melon%20cookie.mp3",
         "songs": [1404744]
+      },
+      "butterfly-on-your-shoulder": {
+        "name": "Butterfly On Your Shoulder (Len Version)",
+        "artist": "noripy",
+        "startOffset": 0,
+        "url": "https://archive.org/download/butterfly-on-your-right-shoulder/noripy%20-%20Butterfly%20on%20Your%20Right%20Shoulder%20-%20Track%20%282%29.mp3",
+        "songs": [1338610]
+      },
+      "override": {
+        "name": "Override",
+        "artist": "Yoshida Yasei",
+        "startOffset": 0,
+        "url": "https://ia801009.us.archive.org/35/items/BiliBili-BV1dTEFzpEKd_p1-1KE2FET2VB/BV1dTEFzpEKd_p1.mp4",
+        "songs": [1329191]
+      },
+      "d-n-a": {
+        "name": "D/N/A (Vocaloid version)",
+        "artist": "Azari",
+        "startOffset": 0,
+        "url": "https://dn711202.ca.archive.org/0/items/youtube-j9RGt9Z_UeE/j9RGt9Z_UeE.mp4",
+        "songs": [639410]
+      },
+      "lagtrain": {
+        "name": "Lagtrain (Vocaloid version)",
+        "artist": "Inabakumori",
+        "startOffset": 0,
+        "url": "https://dn721605.ca.archive.org/0/items/BiliBili-BV1fK4y1s7Qf_p1-1Q5K2VB/BV1fK4y1s7Qf_p1.mp4",
+        "songs": [1044622]
       }
     },
     "youtube": {}
