@@ -104,15 +104,36 @@
         "name": "D/N/A (Vocaloid version)",
         "artist": "Azari",
         "startOffset": 0,
-        "url": "https://dn711202.ca.archive.org/0/items/youtube-j9RGt9Z_UeE/j9RGt9Z_UeE.mp4",
+        "url": "https://ia800807.us.archive.org/33/items/vocaloid-music-downloads/D_N_A-full-%E5%AE%B5%E5%B4%8E%20%E5%A5%8F%2B%E9%8F%A1%E9%9F%B3%20%E3%83%AA%E3%83%B3%2B%E6%9C%9D%E6%AF%94%E5%A5%88%20%E3%81%BE%E3%81%B5%E3%82%86%2B%E6%9D%B1%E9%9B%B2%20%E7%B5%B5%E5%90%8D%2B%E6%9A%81%E5%B1%B1%20%E7%91%9E%E5%B8%8C.mp3",
         "songs": [639410]
       },
       "lagtrain": {
         "name": "Lagtrain (Vocaloid version)",
         "artist": "Inabakumori",
         "startOffset": 0,
-        "url": "https://dn721605.ca.archive.org/0/items/BiliBili-BV1fK4y1s7Qf_p1-1Q5K2VB/BV1fK4y1s7Qf_p1.mp4",
+        "url": "https://ia800807.us.archive.org/33/items/vocaloid-music-downloads/%E3%83%A9%E3%82%AF%E3%82%99%E3%83%88%E3%83%AC%E3%82%A4%E3%83%B3-full-%E6%AD%8C%E6%84%9B%E3%83%A6%E3%82%AD.mp3",
         "songs": [1044622]
+      },
+      "miracle-paint": {
+        "name": "Miracle Paint",
+        "artist": "OSTER Project",
+        "startOffset": 8.5,
+        "url": "https://ia800807.us.archive.org/33/items/vocaloid-music-downloads/%E3%83%9F%E3%83%A9%E3%82%AF%E3%83%AB%E3%83%98%E3%82%9A%E3%82%A4%E3%83%B3%E3%83%88-full-%E5%A4%A9%E9%A6%AC%20%E5%8F%B8%2B%E9%B3%B3%20%E3%81%88%E3%82%80%2B%E8%8D%89%E8%96%99%20%E5%AF%A7%E3%80%85%2B%E7%A5%9E%E4%BB%A3%20%E9%A1%9E%2B%E5%88%9D%E9%9F%B3%20%E3%83%9F%E3%82%AF.mp3",
+        "songs": [595726]
+      },
+      "daidaidaidaidaikirai": {
+        "name": "DAIDAIDAIDAIDAIKIRAI",
+        "artist": "Amala",
+        "startOffset": 0,
+        "url": "https://dn710302.ca.archive.org/0/items/vocaloid-music-downloads/%E3%82%BF%E3%82%99%E3%82%A4%E3%82%BF%E3%82%99%E3%82%A4%E3%82%BF%E3%82%99%E3%82%A4%E3%82%BF%E3%82%99%E3%82%A4%E3%82%BF%E3%82%99%E3%82%A4%E3%82%AD%E3%83%A9%E3%82%A4-full-%E5%88%9D%E9%9F%B3%20%E3%83%9F%E3%82%AF%2B%E9%87%8D%E9%9F%B3%E3%83%86%E3%83%88.mp3",
+        "songs": [1245360]
+      }
+      "lost-umbrella": {
+        "name": "Lost Umbrella (SEKAI Ver.)",
+        "artist": "Inabakumori",
+        "startOffset": 0,
+        "url": "https://dn710302.ca.archive.org/0/items/vocaloid-music-downloads/%E3%83%AD%E3%82%B9%E3%83%88%E3%82%A2%E3%83%B3%E3%83%95%E3%82%99%E3%83%AC%E3%83%A9-full-%E9%8F%A1%E9%9F%B3%20%E3%83%AA%E3%83%B3%2B%E5%AE%B5%E5%B4%8E%20%E5%A5%8F%2B%E6%9C%9D%E6%AF%94%E5%A5%88%20%E3%81%BE%E3%81%B5%E3%82%86%2B%E6%9D%B1%E9%9B%B2%20%E7%B5%B5%E5%90%8D%2B%E6%9A%81%E5%B1%B1%20%E7%91%9E%E5%B8%8C.mp3",
+        "songs": [1245360]
       }
     },
     "youtube": {}
